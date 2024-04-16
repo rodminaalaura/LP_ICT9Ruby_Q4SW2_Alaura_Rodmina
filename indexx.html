@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Calculator</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: Poppins, sans-serif;
+            font-weight: bolder;
+            background-color: #FFB6C1
+        }
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff; 
+        }
+
+        .calculator-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .calculator-header img {
+            width: 170px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .calculator-description {
+            font-size: 18px;
+            margin: 0;
+            color: #000; 
+        }
+
+        .calculator-inputs {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .calculator-inputs input {
+            width: calc(50% - 5px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .calculator-buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .calculator-buttons .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .calculator-buttons input {
+            width: calc(50% - 5px);
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff8396; 
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .calculator-buttons input:hover {
+            background-color: #ff1493; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator-header">
+            <img src="wee.png" alt="Calculator Image">
+            <div class="calculator-description">rod's calculator!!<span style="color: #ff8396;">★</span></div>
+        </div>
+        <div class="calculator-inputs">
+            <input type="text" placeholder="enter the 1st number" id="id1">
+            <input type="text" placeholder="enter the 2nd number" id="id2">
+        </div>
+        <div class="calculator-buttons">
+            <div class="row">
+                <input type="submit" value="add" onclick="addition()">
+                <input type="submit" value="subtract" onclick="Subtraction()">
+            </div>
+            <div class="row">
+                <input type="submit" value="multiply" onclick="Compute()">
+                <input type="submit" value="divide" onclick="Divide()">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+
+    function Compute() {
+        num1 = document.getElementById('id1').value;
+        num2 = document.getElementById('id2').value;
+        product = num1 * num2;
+            window.alert(product);
+        }  
+
+    function Divide() {
+        num1 = document.getElementById('id1').value;
+        num2 = document.getElementById('id2').value;
+        quotient = num1 / num2;
+            window.alert(quotient);
+    }
+
+    function Subtraction() {
+        num1 = document.getElementById('id1').value;
+        num2 = document.getElementById('id2').value;
+        difference = num1 - num2;
+            window.alert(difference);
+    }
+
+    function addition() {
+        num1 = Number(document.getElementById('id1').value);
+        num2 = Number(document.getElementById('id2').value);
+        sum = num1 + num2;
+            window.alert(sum);
+
+    }
+</script>
+</body>
+</html>
